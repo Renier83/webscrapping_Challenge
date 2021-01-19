@@ -6,7 +6,7 @@ import scrape_mars
 
 app = Flask(__name__)
 
-executable_path = {'executable_path': ChromeDriverManager().install()}
+executable_path = {'executable_path': 'C:/Users/renie/Desktop/chromedriver.exe'}
 browser = Browser('chrome', **executable_path, headless=False)
 
 

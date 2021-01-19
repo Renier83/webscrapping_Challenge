@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import datetime as dt
 
-executable_path = {'executable_path': ChromeDriverManager().install()}
+executable_path = {'executable_path': 'C:/Users/renie/Desktop/chromedriver.exe'}
 browser = Browser('chrome', **executable_path, headless=False)
 
 def scrape_all():
@@ -56,8 +56,8 @@ def featured_image(browser):
     browser.visit(url)
 
    
-    full_image_elem = browser.find_by_id('full_image')[0]
-    full_image_elem.click()
+    # full_image_elem = browser.find_by_id('full_image')[0]
+    # full_image_elem.click()
     browser.is_element_present_by_text('more info', wait_time=1)
     more_info_elem = browser.links.find_by_partial_text('more info')
     more_info_elem.click()
